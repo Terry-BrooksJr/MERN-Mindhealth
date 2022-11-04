@@ -1,0 +1,45 @@
+// Update the VARIANT arg in docker-compose.yml to pick a Node.js version
+{
+	"name": "Mind Health MERN",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"mongodb.mongodb-vscode",
+				"devzstudio.mern-snippets",
+				"ej.react-node-snippets",
+				"streetsidesoftware.code-spell-checker",
+				"ms-azuretools.vscode-docker",
+				"p1c2u.docker-compose",
+				"mikestead.dotenv",
+				"henriiik.docker-linter",
+				"bodil.file-browser",
+				"GitHub.copilot",
+				"lior-chamla.google-fonts",
+				"andrejunges.Handlebars",
+				"anteprimorac.html-end-tag-labels",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"ritwickdey.LiveServer",
+				"pinage404.general-improvement-extension-pack",
+				"Prisma.prisma",
+				"esbenp.prettier-vscode",
+				"pkosta2005.heroku-command"
+			]
+		}
+	},
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node",
+	"features": {
+		"ghcr.io/devcontainers/features/docker-from-docker:1": {},
+		"ghcr.io/devcontainers/features/node:1": {},
+		"ghcr.io/devcontainers-contrib/features/heroku-cli:1": {},
+		"ghcr.io/dhoeric/features/google-cloud-cli:1": {}
+	}
+}
