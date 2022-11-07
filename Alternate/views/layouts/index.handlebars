@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Mind Health - Chicago -
+        </title>
+        <link rel="icon" type="image/x-icon" href="/Alternate/public/images/favicon.ico">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel='stylesheet'
+              href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+        <link rel='stylesheet'
+              href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link href="https://assets.codepen.io/6554302/style_1.css" rel="stylesheet">    
+<script src="https://assets.codepen.io/6554302/script_1.js"></script>
+</head>
+    <body>
+        <!-- partial:index.partial.html -->
+        <!-- partial:index.partial.html -->
+        <!-- START PRELOADER -->
+        {{!-- <div id="preloader">
+            <div id="status">&nbsp;</div>
+        </div> --}}
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button"
+                            class="navbar-toggle collapsed"
+                            data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1"
+                            aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="logo-link-brand">
+                        <a id="logo-link" href="#">
+                            <img id="logo"
+                                 src="https://assets.codepen.io/6554302/IMG_0349_edited+%283%29.png"
+                                 alt=""/>
+                            <span id="logo-font-black">Mind</span><span id="logo-font-yellow">Health</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Our Service</a>
+                        </li>
+                        <li>
+                            <a href="#">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <li id="button-list">
+                            <button id="btn-booking"
+                                    type="button"
+                                    class="btn btn-warning"
+                                    data-toggle="modal"
+                                    data-target="#modal-book-an-appointment">
+                                Book
+                                <br>
+                                An
+                                <br>
+                                Appointment
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+        <div id="content">
+        {{{body}}}
+        </div>
+        <div class="modal fade"
+             id="modal-book-an-appointment"
+             tabindex="-1"
+             role="dialog"
+             aria-labelledby="exampleModalLabel"
+             aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel">Book an Appointment At MindHealth</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="footer-header">Disclaimer</div>
+                        <p>
+                        Please note the MindHealth Practice does not provide a crisis service. If you are in crisis, please call the Mental Health America at <strong><a href="tel:+18009855990">1-800-985-5990</a></strong> or Text <a href=”sms:[741741]&body=[HOME]”>HOME</a> to <strong>741741</strong> <em>(Standard Text Message Rates Apply)<em> and go to the emergency department of your local hospital or call 911.
+                    </p>
+                    <p>
+                        The content on this website is only a summary of the subject matter covered and is not intended to be, nor should be relied on, as a substitute for professional advice.
+                    </p>
+                    <p>
+                        Every care has been taken to ensure that information is accurate and appropriate to the general population. However, no warranties or
+                        representations regarding the quality, accuracy or fitness for purpose of any content on this site are made.
+                        Any person accessing this site shall have no right to seek any compensation for any loss or damage from any party associated with the site howsoever occasioned.
+                    </p>
+                    <p>
+                        Links to third party sites are provided for general information only. MindHealth Practice does not guarantee the content of any sites.
+                        Your access to, and reliance on, third part site is entirely at your own risk. MindHealth Practice excludes all liability (including for negligence)
+                        for any loss, cost, expense or damage arising out of your use of third party sites.
+                    </p>
+                    <p id='copyright'></p>
+                    <div class="developer-block">
+                        <a href="https://www.brooksjr.com">
+                            <img id='developer-icon'
+                                 src="https://assets.codepen.io/6554302/Blackberry+Py_LOGO-12.png"
+                                 alt="Blackberry Py Development Logo"/>
+                        </a>
+                        <sub>Developed and Maintained by Blackberry-Py Dev, LLC.</sub>
+                        {{!-- TODO: Add Bug Reporting Functionality --}}
+                    </div>
+                </div>
+                <!-- /.col sm 12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </footer>
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+    <script src='https://fonts.googleapis.com/icon?family=Material+Icons'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js'></script>
+<script src="https://assets.codepen.io/6554302/script_1.js"></script></html>
