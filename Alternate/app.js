@@ -7,12 +7,17 @@ const router = express.Router();
 const port = 5500;
 const handlebars = require('express-handlebars');
 const helmet = require("helmet");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
+const  nodemailer = require('nodemailer');
+
+require('dotenv').config()
 
 
 // const indexRouter = require('./routes/index');
 
 const app = express();
-
+const Form = require("./models/form");
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -63,6 +68,30 @@ app.use(function(req, res, next) {
 //   res.render('error');
 // });
 
+// Emailing FUunctonality
+// const transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: '',
+//     pass: 'Qu33nL@dy'
+//   } 
+// });
+
+// transporter.sendMail(mailOptions, function (error, info) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log('Email sent: ' + info.response);
+//   }
+// });
+let requester 
+
+// var mailOptions = {
+//   from: 'terry.arthur@brooksjr.com',
+//   to: requester,
+//   subject: 'Sending Email using Node.js',
+//   html: ''''''
+// };
 //Makes the app listen to port 5500
 app.listen(port, () => console.log(`App listening to port ${port}`));
 
