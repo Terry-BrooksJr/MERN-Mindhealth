@@ -29,7 +29,8 @@
 				"pinage404.general-improvement-extension-pack",
 				"Prisma.prisma",
 				"esbenp.prettier-vscode",
-				"pkosta2005.heroku-command"
+				"pkosta2005.heroku-command",
+				"formulahendry.auto-complete-tag"
 			]
 		}
 	},
