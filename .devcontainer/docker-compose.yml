@@ -25,16 +25,30 @@ services:
     restart: unless-stopped
     volumes:
       - mongodb-data:/data/db
+    ports:
+      - "8001:27017"
+  auth:
+    image: mysql:latest
+    restart: unless-stopped
+    volumes:
+      - user-data:/data/db
+    ports:
+      - "8002:3306"
       
 
     # Uncomment to change startup options
     environment:
-     MONGO_INITDB_ROOT_USERNAME: admin-root
-     MONGO_INITDB_ROOT_PASSWORD: minion_flacon
+     MONGO_INITDB_ROOT_USERNAME: tbrooks
+     MONGO_INITDB_ROOT_PASSWORD: Qu33nL@dy
      MONGO_INITDB_DATABASE: blog-repo
+     MYSQL_ROOT_PASSWORD: Qu33nL@dy
+     MYSQL_DATABASE_URL: mysql://root:Qu33nL@dy@localhost:8802/DATABASE
+     MONGO_DATABASE_URL: mongodb://admin-root:minion_flacon@localhost:8001
+
 
     # Add "forwardPorts": ["27017"] to **devcontainer.json** to forward MongoDB locally.
     # (Adding the "ports" property to this file will not forward from a Codespace.)
 
 volumes:
   mongodb-data:
+  user-data:q
