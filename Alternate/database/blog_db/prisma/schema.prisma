@@ -1,0 +1,37 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+
+
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("MONGO_DATABASE_URL")
+}
+
+model tags {
+  id       String     @id @default(auto()) @map("_id") @db.ObjectId
+  name     String
+  articles articles[]
+}
+
+model articles {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  title     String
+  content   String?
+  status    Status   @default(draft)
+  tags      tags?    @relation(fields: [tagsId], references: [id])
+  tagsId    String?  @db.ObjectId
+}
+
+enum Status {
+  published
+  draft
+  retracted
+}
