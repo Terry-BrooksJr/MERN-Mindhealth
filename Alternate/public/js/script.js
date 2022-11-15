@@ -1,3 +1,5 @@
+const $ = require('jquery')
+
 
 $(function () {
 	// Anchor Target Scroll Animation
@@ -67,3 +69,25 @@ copyright.innerHTML = "© MindHealth " + year;
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 })
+
+function grabStuff() {
+	var fElements = {};
+	$('form [name]').each(function () {
+		fElements[this.name] = this.value;
+	});
+}
+
+
+Grammarly.init('client_SATjtFzCcviHRQfn5qJcZn')
+
+
+tinymce.init({
+	selector: 'textarea#inp_editor1',
+	plugins: 'lists save',
+	toolbar: 'numlist bullist save',
+	save_onsavecallback: () => {
+		console.log('Saved');
+	}
+});
+const date = new Date();
+document.getElementById("date-stamp").innerHTML = date.toDateString();

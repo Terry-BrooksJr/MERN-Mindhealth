@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;}
+
+.my-row{
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+}
+
+#left-col {
+  border: 1px solid #2B5766;
+  height: 100%;
+  background: linear-gradient(232deg, rgba(2,0,36,1) 0%, rgba(255,215,0,1) 75%);
+
+}
+#left-col ul {
+  list-style: none; 
+}
+#right-col {
+  height: 100%;
+}
+#blog h2, h2 + ul li {
+  margin-left: 5%;
+}
+#blog h2 {
+  color: #FFF;
+}
+
+ul + ul li{
+  color: #FFF;
+}
+
+.form-group div button{
+  margin-top: 2%;
+}
