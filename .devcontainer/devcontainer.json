@@ -4,7 +4,6 @@
 	"dockerComposeFile": "docker-compose.yml",
 	"service": "app",
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
@@ -34,7 +33,6 @@
 			]
 		}
 	},
-
 	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
 	"remoteUser": "node",
 	"features": {
@@ -42,5 +40,22 @@
 		"ghcr.io/devcontainers/features/node:1": {},
 		"ghcr.io/devcontainers-contrib/features/heroku-cli:1": {},
 		"ghcr.io/dhoeric/features/google-cloud-cli:1": {}
-	}
+	},
+	"forwardPorts": [
+		8001,
+		8002
+	],
+	"portsAttributes": {
+		"8001": {
+			"onAutoForward": "ignore",
+			"label": "MongoDB - Blog Database",
+			"requireLocalPort" : true
+		},
+		"8002": {
+			"onAutoForward": "ignore",
+			"label": "Authentication - User Database",
+			"requireLocalPort" : true
+		}
+	},
+	"postCreateCommand": "npm install && npm list"
 }
