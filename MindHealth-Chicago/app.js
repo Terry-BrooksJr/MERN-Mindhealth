@@ -10,12 +10,17 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const session = require('express-session');
 const app = express();
+const dotenv = require('dotenv')
+const dotenvExpand = require('dotenv-expand')
+const myEnv = dotenv.config()
 
-
-require('dotenv').config()
 
 // Utility and Misc Middleware
+dotenvExpand.expand(myEnv) // Load environment variables from .env file
 app.use(express.static(__dirname + '/public')); //Serves resources from public folder
+app.use(express.json()); // for parsing application/json
+app.use(express.urlencoded({ extended: false })); // for parsing application/x-www-form-urlencoded
+app.use(cookieParser()); // for parsing cookies
 
 
 
@@ -43,13 +48,10 @@ app.engine('handlebars',
   handlebars.engine(
   {
     extname: 'handlebars',
-    defaultLayout: 'main',
+    defaultLayout: 'index',
     layoutsDir: __dirname + '/views/layouts',
 }));
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));           
-app.use(cookieParser());
 
 
 
