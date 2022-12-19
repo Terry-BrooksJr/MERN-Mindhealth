@@ -1,6 +1,3 @@
-const $ = require('jquery')
-
-
 $(function () {
 	// Anchor Target Scroll Animation
 
@@ -53,41 +50,13 @@ jQuery.noConflict();
 	$(window).on("load", function () {
 		// makes sure the whole site is loaded
 		$("#status").fadeOut(); // will first fade out the loading animation
-		$("#preloader").delay(300).fadeOut("slow"); // will fade out the white DIV that covers the website.
+		$("#preloader").delay(100).fadeOut("slow"); // will fade out the white DIV that covers the website.
 	});
 })(jQuery);
 // update footer copyright year
 
 var today = new Date();
 var year = today.getFullYear();
-// Dynamic Copyright Date
+
 var copyright = document.getElementById("copyright");
 copyright.innerHTML = "© MindHealth " + year;
-
-
-// Tooltip Enabler
-$(function () {
-	$('[data-toggle="tooltip"]').tooltip()
-})
-
-function grabStuff() {
-	var fElements = {};
-	$('form [name]').each(function () {
-		fElements[this.name] = this.value;
-	});
-}
-
-
-Grammarly.init('client_SATjtFzCcviHRQfn5qJcZn')
-
-
-tinymce.init({
-	selector: 'textarea#inp_editor1',
-	plugins: 'lists save',
-	toolbar: 'numlist bullist save',
-	save_onsavecallback: () => {
-		console.log('Saved');
-	}
-});
-const date = new Date();
-document.getElementById("date-stamp").innerHTML = date.toDateString();

@@ -16,6 +16,9 @@
 	align-content: center;
 	flex-direction: column;
 }
+.google-map {
+	margin: 30px;
+}
 .content{
 	margin-left: 30px;
 	padding: 10px;

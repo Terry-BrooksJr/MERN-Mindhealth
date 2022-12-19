@@ -13,6 +13,7 @@ const app = express();
 const dotenv = require('dotenv')
 const dotenvExpand = require('dotenv-expand')
 const myEnv = dotenv.config()
+const compression = require("compression");
 
 
 // Utility and Misc Middleware
@@ -21,7 +22,7 @@ app.use(express.static(__dirname + '/public')); //Serves resources from public f
 app.use(express.json()); // for parsing application/json
 app.use(express.urlencoded({ extended: false })); // for parsing application/x-www-form-urlencoded
 app.use(cookieParser()); // for parsing cookies
-
+app.use(compression()); //Compress all routes
 
 
 //Route Initialization
@@ -64,12 +65,10 @@ app.use(function(req, res, next) {
 app.use(logger('dev'));
 app.use(function(err, req, res, next) {
   // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('404-page');
 });
 
 
