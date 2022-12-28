@@ -1,10 +1,10 @@
 @font-face {
 	font-family: Body-Font;
-	src: url(https://assets.codepen.io/6554302/QuattrocentoSans-Regular.ttf);
+	src: url(/fonts/QuattrocentoSans-Regular.ttf);
 }
 @font-face {
 	font-family: Emphasis-Font;
-	src: url(https://assets.codepen.io/6554302/Sacramento-Regular.ttf);
+	src: url(/fonts/Sacramento-Regular.ttf);
 }
 .pt-20 {
 	padding-top: 20px;

@@ -20,4 +20,6 @@ RUN . /etc/os-release \
 
 # [Optional] Uncomment if you want to install more global node modules
 # RUN su node -c "npm install -g /Users/terrybrooksjr/Documents/GitHub/MERN-Mindhealth/MindHealth-Chicago/backend/package.json"
+
+
 CMD RUN './init_setup.sh'

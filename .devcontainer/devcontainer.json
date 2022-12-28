@@ -29,7 +29,8 @@
 				"Prisma.prisma",
 				"esbenp.prettier-vscode",
 				"pkosta2005.heroku-command",
-				"formulahendry.auto-complete-tag"
+				"formulahendry.auto-complete-tag",
+				"Sidekick.sidekick-debugger"
 			]
 		}
 	},
@@ -37,9 +38,7 @@
 	"remoteUser": "node",
 	"features": {
 		"ghcr.io/devcontainers/features/docker-from-docker:1": {},
-		"ghcr.io/devcontainers/features/node:1": {},
-		"ghcr.io/devcontainers-contrib/features/heroku-cli:1": {},
-		"ghcr.io/dhoeric/features/google-cloud-cli:1": {}
+		"ghcr.io/devcontainers/features/node:1": {}
 	},
 	"forwardPorts": [
 		8001,

@@ -2,9 +2,9 @@ const express = require('express');
 const app = require('../app');
 const editorRouter = express.Router();
 
-
-editorRouter.get('/login', (req, res, next) => {
-  res.render('login', { layout: 'login_layout' });
+editorRouter.get('/editor', (req, res, next) => {
+  res.render('editor', { layout: 'editor_layout' });
 });
+
 
 module.exports = editorRouter;
